@@ -32,7 +32,9 @@ class CountdownWidgetState extends State<CountdownWidget>
     super.initState();
 
     controller = AnimationController(
-        duration: Duration(milliseconds: widget.duration));
+      duration: Duration(milliseconds: widget.duration),
+      vsync: this,
+    );
     animation = Tween<double>(begin: widget.width, end: 0).animate(controller)
       ..addListener(() {
         setState(() {

@@ -36,7 +36,9 @@ class _AnswersWidgetState extends State<AnswersWidget>
   void initState() {
     super.initState();
     controller = AnimationController(
-        duration: Duration(milliseconds: 1250));
+      duration: Duration(milliseconds: 1250),
+      vsync: this,
+    );
   }
 
   @override
