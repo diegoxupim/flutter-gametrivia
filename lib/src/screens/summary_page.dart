@@ -22,7 +22,7 @@ class SummaryPage extends StatelessWidget {
           alignment: Alignment.center,
           padding: const EdgeInsets.all(24),
           child: Text(
-            'Final score: ${stats.score}',
+            'Pontuação final: ${stats.score}',
             style: summaryScoreStyle,
           ),
         ),
@@ -39,7 +39,7 @@ class SummaryPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  'CORRECTS: ${stats.corrects.length}',
+                  'Corretas: ${stats.corrects.length}',
                   style: correctsHeaderStyle,
                 ),
               ],
@@ -68,7 +68,7 @@ class SummaryPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  'WRONGS: ${stats.wrongs.length}',
+                  'Incorretas: ${stats.wrongs.length}',
                   style: wrongsHeaderStyle,
                 ),
               ],
@@ -97,7 +97,7 @@ class SummaryPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  'NOT GIVEN: ${stats.noAnswered.length}',
+                  'Não respondida: ${stats.noAnswered.length}',
                   style: notAnsweredHeaderStyle,
                 ),
               ],
@@ -128,7 +128,7 @@ class SummaryPage extends StatelessWidget {
       ..add(Container(
         width: 90,
         child: RaisedButton(
-          child: const Text('Home'),
+          child: const Text('Volta para o ínicio'),
           onPressed: () => appState.tabController.value = AppTab.main,
         ),
       ));

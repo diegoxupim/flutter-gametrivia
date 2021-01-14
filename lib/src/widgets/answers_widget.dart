@@ -128,7 +128,7 @@ class _AnswersWidgetState extends State<AnswersWidget>
 
       return Positioned(
         width: MediaQuery.of(context).size.width - 46.0,
-        height: 54.0,
+        height: 56,
         // If the answer isn't the chosen one to the top parameter
         // is passed the value of the animation, while for the chosen
         // answer it is passed a fixed position.
@@ -136,52 +136,54 @@ class _AnswersWidgetState extends State<AnswersWidget>
             ? animations[index].value
             : boxHeight * index),
         left: 0.0,
-        child: GestureDetector(
-            child: FadeInWidget(
-              duration: 750,
-              child: Container(
-                decoration: BoxDecoration(
-                    color: (index == widget.answerAnimation.chosenAnswerIndex)
-                        ? colorAnimation.value
-                        : const Color(0xff283593),
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(35),
-                      topRight: Radius.circular(15),
-                      bottomLeft: Radius.circular(35),
-                      bottomRight: Radius.circular(15),
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                          color:
-                              (colorAnimation.status == AnimationStatus.forward)
-                                  ? colorAnimation.value
-                                  : Colors.blue[500],
-                          blurRadius:
-                              (colorAnimation.status == AnimationStatus.forward)
-                                  ? 19.0
-                                  : 3.0,
-                          spreadRadius:
-                              (colorAnimation.status == AnimationStatus.forward)
-                                  ? 2.5
-                                  : 1.5),
-                    ]),
-                child: ListTile(
-                  leading: CircleAvatar(
-                      radius: questionCircleAvatarRadius,
-                      backgroundColor: questionCircleAvatarBackground,
-                      child: Text(
-                        questionLeadings[index],
-                        style: answersLeadingStyle,
-                      )),
-                  title: Text(answer, style: answersStyle),
+        child: Container(
+          child: GestureDetector(
+              child: FadeInWidget(
+                duration: 750,
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: (index == widget.answerAnimation.chosenAnswerIndex)
+                          ? colorAnimation.value
+                          : const Color(0xff283593),
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(35),
+                        topRight: Radius.circular(15),
+                        bottomLeft: Radius.circular(35),
+                        bottomRight: Radius.circular(15),
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                            color:
+                                (colorAnimation.status == AnimationStatus.forward)
+                                    ? colorAnimation.value
+                                    : Colors.white,
+                            blurRadius:
+                                (colorAnimation.status == AnimationStatus.forward)
+                                    ? 19.0
+                                    : 3.0,
+                            spreadRadius:
+                                (colorAnimation.status == AnimationStatus.forward)
+                                    ? 2.5
+                                    : 1.5),
+                      ]),
+                  child: ListTile(
+                    leading: CircleAvatar(
+                        radius: questionCircleAvatarRadius,
+                        backgroundColor: questionCircleAvatarBackground,
+                        child: Text(
+                          questionLeadings[index],
+                          style: answersLeadingStyle,
+                        )),
+                    title: Text(answer, style: answersStyle),
+                  ),
                 ),
               ),
-            ),
-            onTap: () {
-              if (!widget.isTriviaEnd) {
-                _playAnimation(answer);
-              }
-            }),
+              onTap: () {
+                if (!widget.isTriviaEnd) {
+                  _playAnimation(answer);
+                }
+              }),
+        ),
       );
     }).toList();
 

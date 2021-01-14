@@ -55,10 +55,10 @@ class DrawerWidget extends StatelessWidget {
           DrawerHeader(
             child: Center(
               child: const Text(
-                'TRIVIA',
+                'Sabe tudo',
                 style: TextStyle(
-                  fontSize: 36.0,
-                  fontWeight: FontWeight.w700,
+                  fontSize: 28.0,
+                  fontWeight: FontWeight.w400,
                   color: Colors.white,
                   letterSpacing: 4.0,
                   shadows: [
@@ -76,7 +76,7 @@ class DrawerWidget extends StatelessWidget {
             ),
           ),
           ListTile(
-            title: const Text('Settings'),
+            title: const Text('Configurações'),
             onTap: () {
               Navigator.pop(context);
               Navigator.push(
@@ -84,9 +84,6 @@ class DrawerWidget extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => SettingsPage()),
               );
             },
-          ),
-          const AboutListTile(
-            child: Text('Made with Flutter'),
           ),
         ],
       ),

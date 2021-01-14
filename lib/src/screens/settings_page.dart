@@ -39,7 +39,7 @@ class _SettingsPageState extends State<SettingsPage> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          'Settings',
+          'Configurações',
         ),
       ),
       body: Container(
@@ -52,7 +52,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
-                    'Choose a theme:',
+                    'Tema do aplicativo:',
                     style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                 ),
@@ -74,7 +74,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
-                    'Quiz database:',
+                    'Origem do contéudo:',
                     style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                 ),
@@ -87,7 +87,7 @@ class _SettingsPageState extends State<SettingsPage> {
                           items: [
                             const DropdownMenuItem<ApiType>(
                               value: ApiType.mock,
-                              child: Text('Demo'),
+                              child: Text('Demonstração'),
                             ),
                             const DropdownMenuItem<ApiType>(
                               value: ApiType.remote,
@@ -110,7 +110,7 @@ class _SettingsPageState extends State<SettingsPage> {
                                 const Padding(
                                   padding: EdgeInsets.all(8.0),
                                   child: Text(
-                                    'N. of questions:',
+                                    'N. de questões:',
                                     style:
                                         TextStyle(fontWeight: FontWeight.w500),
                                   ),
@@ -128,7 +128,7 @@ class _SettingsPageState extends State<SettingsPage> {
                                             decoration: InputDecoration(
                                               border: InputBorder.none,
                                               hintText:
-                                                  'Enter a value between 2 and 15.',
+                                                  'Coloque um valor entre 2 e 15.',
                                               errorText: snapshot.error,
                                             ),
                                             keyboardType: TextInputType.number,
@@ -144,7 +144,7 @@ class _SettingsPageState extends State<SettingsPage> {
                                 const Padding(
                                   padding: EdgeInsets.all(8.0),
                                   child: Text(
-                                    'Difficulty:',
+                                    'Dificuldade:',
                                     style:
                                         TextStyle(fontWeight: FontWeight.w500),
                                   ),
@@ -159,17 +159,17 @@ class _SettingsPageState extends State<SettingsPage> {
                                             const DropdownMenuItem<
                                                 QuestionDifficulty>(
                                               value: QuestionDifficulty.easy,
-                                              child: Text('Easy'),
+                                              child: Text('Fácil'),
                                             ),
                                             const DropdownMenuItem<
                                                 QuestionDifficulty>(
                                               value: QuestionDifficulty.medium,
-                                              child: Text('Medium'),
+                                              child: Text('Médio'),
                                             ),
                                             const DropdownMenuItem<
                                                 QuestionDifficulty>(
                                               value: QuestionDifficulty.hard,
-                                              child: Text('Hard'),
+                                              child: Text('Difícil'),
                                             ),
                                           ]);
                                     }),
@@ -184,7 +184,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
-                    'Countdown:',
+                    'Tempo de resposta:',
                     style: TextStyle(fontWeight: FontWeight.w500),
                   ),
                 ),
@@ -198,7 +198,7 @@ class _SettingsPageState extends State<SettingsPage> {
                             onChanged: appState.countdown.inStream,
                             decoration: InputDecoration(
                               border: InputBorder.none,
-                              hintText: 'Enter a value in seconds (max 60).',
+                              hintText: 'Coloque o valor em segundos (max 60).',
                               errorText: snapshot.error,
                             ),
                             keyboardType: TextInputType.number,

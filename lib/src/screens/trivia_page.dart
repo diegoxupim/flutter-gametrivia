@@ -67,7 +67,7 @@ class TriviaMain extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(16),
                     child: Text(
-                      'SCORE: ${bloc.stats.score}',
+                      'Pontos: ${bloc.stats.score}',
                       style: scoreHeaderStyle,
                     ),
                   ),
@@ -77,15 +77,15 @@ class TriviaMain extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Text(
-                    'Corrects: ${bloc.stats.corrects.length}',
+                    'Corretas: ${bloc.stats.corrects.length}',
                     style: questionsHeaderStyle,
                   ),
                   Text(
-                    'Wrongs: ${bloc.stats.wrongs.length}',
+                    'Incorretas: ${bloc.stats.wrongs.length}',
                     style: questionsHeaderStyle,
                   ),
                   Text(
-                    'Not answered: ${bloc.stats.noAnswered.length}',
+                    'Não respondida: ${bloc.stats.noAnswered.length}',
                     style: questionsHeaderStyle,
                   ),
                 ],
@@ -132,7 +132,7 @@ class TriviaMain extends StatelessWidget {
                     height: 24,
                     padding: const EdgeInsets.all(22),
                     child: Text(
-                      'Time left: ${((bloc.countdown - snapshot.data) / 1000)}',
+                      'Tempo restante: ${((bloc.countdown - snapshot.data) / 1000)}',
                       style: const TextStyle(
                           color: Colors.white,
                           fontSize: 12,

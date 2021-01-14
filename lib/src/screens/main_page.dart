@@ -30,10 +30,10 @@ class MainPage extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 28.0, vertical: 56.0),
                       child: const Text(
-                        'TRIVIA',
+                        'Sabe tudo',
                         style: TextStyle(
-                          fontSize: 46.0,
-                          fontWeight: FontWeight.w700,
+                          fontSize: 38.0,
+                          fontWeight: FontWeight.w500,
                           color: Colors.white,
                           letterSpacing: 4.0,
                           shadows: [
@@ -47,7 +47,7 @@ class MainPage extends StatelessWidget {
                       ),
                     ),
                     const Text(
-                      'Choose a category:',
+                      'Escolha uma categoria:',
                       style: TextStyle(
                         fontSize: 16.0,
                         fontWeight: FontWeight.w600,
@@ -89,8 +89,9 @@ class MainPage extends StatelessWidget {
                 GestureDetector(
                   child: Container(
                     alignment: Alignment.center,
-                    height: 36,
-                    width: 90,
+                    height: 50,
+                    padding: EdgeInsets.all(10),
+                    width: double.maxFinite,
                     decoration: BoxDecoration(
                         color: Theme.of(context).primaryColor,
                         borderRadius: const BorderRadius.all(
@@ -98,12 +99,12 @@ class MainPage extends StatelessWidget {
                         ),
                         boxShadow: [
                           BoxShadow(
-                              color: Colors.blue,
+                              color: Colors.white,
                               blurRadius: 2.0,
                               spreadRadius: 2.5),
                         ]),
                     child: const Text(
-                      'Play trivia',
+                      'Jogar',
                       style: TextStyle(fontWeight: FontWeight.w500),
                     ),
                   ),

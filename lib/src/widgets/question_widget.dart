@@ -25,7 +25,7 @@ class QuestionWidget extends StatelessWidget {
           shadows: [
             Shadow(
               blurRadius: 2.0,
-              color: Colors.lightBlueAccent,
+              color: Colors.white,
             ),
           ],
         ),
